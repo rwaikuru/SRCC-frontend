@@ -50,10 +50,12 @@ export default function RootLayout({ children }) {
         <SidebarProvider
           style={{
             "--sidebar-width": "14rem",
+            
+
           }}
         >
           <AppSidebar />
-          <SidebarInset>
+          <SidebarInset > 
             <ThemeProvider
               attribute="class"
               defaultTheme="system"

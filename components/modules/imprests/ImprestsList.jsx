@@ -57,7 +57,7 @@ const data = [
   },
   {
     requestId: "3",
-    projectName: "Contract C",
+    projectName: "Project C",
     totalAmount: "300,000",
     status: "Approved",
     requestDate: "2023-03-10",

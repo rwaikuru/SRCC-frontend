@@ -11,21 +11,22 @@ import {
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
-import { Bell, LogOut } from "lucide-react"; 
+import { Bell, LogOut, Settings, User} from "lucide-react"; 
 
 export default function Header() {
   return (
-    <header className="flex h-16 shrink-0 bg-[#204c44] items-center justify-between gap-2 border-b px-6">
+    <header className="flex h-16 shrink-0 items-center justify-between gap-2 border-b px-6">
       <div className="flex items-center gap-2">
         <SidebarTrigger className="-ml-2" />
         <Separator orientation="vertical" className="h-6" />
       </div>
       <div className="flex items-center gap-4">
-        <Bell className="h-6 w-6 text-white" />
+        <Bell className="h-6 w-6 text-black" />
         <DropdownMenu>
           <DropdownMenuTrigger asChild>
             <Button variant="ghost" className="relative h-8 w-8 rounded-full">
-              <Avatar className="h-8 w-8">
+              
+              <Avatar className="h-8 w-8 bg-black">
                 <AvatarImage src="/avatars/01.png" alt="@johndoe" />
                 <AvatarFallback>JD</AvatarFallback>
               </Avatar>
@@ -36,10 +37,16 @@ export default function Header() {
               <div className="text-sm font-medium">John Doe</div>
               <div className="text-xs text-muted-foreground">charles@srcc.com</div>
             </DropdownMenuItem>
-            <DropdownMenuItem>Profile</DropdownMenuItem>
-            <DropdownMenuItem>Settings</DropdownMenuItem>
+            <DropdownMenuItem>
+              <User className="h-4 w-4 text-black" />
+              Profile
+            </DropdownMenuItem>
+            <DropdownMenuItem>
+            <Settings className="h-4 w-4 text-black" />
+            Settings
+            </DropdownMenuItem>
             <DropdownMenuItem className="flex items-center gap-2">
-              <LogOut className="h-4 w-4" />
+            <LogOut className="h-4 w-4 text-black" />
               Log out
             </DropdownMenuItem>
           </DropdownMenuContent>
